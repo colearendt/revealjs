@@ -177,6 +177,9 @@ revealjs_presentation <- function(incremental = FALSE,
   if (is.character(reveal_plugins)) {
     
     # validate that we need to use self_contained for plugins
+    message(self_contained)
+    self_contained <- as.logical(self_contained)
+    message(self_contained)
     if (self_contained)
       stop("Using reveal_plugins requires self_contained: false")
     
